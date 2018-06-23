@@ -15,7 +15,7 @@
 compile 'com.istation:istationsdk:1.0.0'
 ```
 
-> 请将1.0.0替换为此徽章后面的版本号<a href='https://bintray.com/sykes/istationsdk/istation?source=watch' alt='Get automatic notifications about new "istation" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_color.png'></a>
+> 请将1.0.0替换为此徽章后面的版本号<a href='https://bintray.com/sykes/istationsdk/istation/_latestVersion'><img src='https://api.bintray.com/packages/sykes/istationsdk/istation/images/download.svg'></a>
 
 
 ### 2.IstationSDK.init();
