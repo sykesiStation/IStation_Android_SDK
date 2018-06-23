@@ -5,7 +5,7 @@
 >istation Android SDK 是一个 Android 端客服系统访客解决方案，既包含了客服聊天逻辑管理，也提供了聊天界面，开发者可方便的将客服功能集成到自己的 APP 中。
 
 ## 快速集成
-### 1.添加 SDK 到项目中。
+### 1.添加 SDK 到项目中（如混淆请自行加入混淆文件）。
 
 #### Android Studio: 
 
@@ -233,8 +233,6 @@ public class IstationUIConfig {
      * title右边text颜色
      */
     private Integer titleRightColor;
-
-
 
 
 
