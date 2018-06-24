@@ -6,9 +6,7 @@
 #
 # For more details, see
 #   http://developer.android.com/guide/developing/tools/proguard.html
-
 # Add any project specific keep options here:
-
 # If your project uses WebView with JS, uncomment the following
 # and specify the fully qualified class name to the JavaScript interface
 # class:
@@ -20,19 +18,14 @@
 
 #包明不混合大小写
 -dontusemixedcaseclassnames
-
 #不去忽略非公共的库类
 -dontskipnonpubliclibraryclasses
-
  #优化  不优化输入的类文件
 -dontoptimize
-
  #预校验
 -dontpreverify
-
  #混淆时是否记录日志
 -verbose
-
  # 混淆时所采用的算法
 -optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
 
@@ -55,7 +48,6 @@
 
 #忽略警告
 -ignorewarning
-
 ##记录生成的日志数据,gradle build时在本项目根目录输出##
 #apk 包内所有 class 的内部结构
 -dump proguard/class_files.txt
@@ -66,14 +58,10 @@
 #混淆前后的映射
 -printmapping proguard/mapping.txt
 ########记录生成的日志数据，gradle build时 在本项目根目录输出-end######
-
 #如果引用了v4或者v7包
 -dontwarn android.support.**
 
 ####混淆保护自己项目的部分代码以及引用的第三方jar包library-end####
-
-
-
 #保持 native 方法不被混淆
 -keepclasseswithmembernames class * {
     native <methods>;
@@ -134,7 +122,6 @@
 
 #避免混淆泛型 如果混淆报错建议关掉
 #-keepattributes Signature
-
 #移除Log类打印各个等级日志的代码，打正式包的时候可以做为禁log使用，这里可以作为禁止log打印的功能使用，另外的一种实现方案是通过BuildConfig.DEBUG的变量来控制
 #-assumenosideeffects class android.util.Log {
 #    public static *** v(...);
@@ -143,11 +130,9 @@
 #    public static *** w(...);
 #    public static *** e(...);
 #}
-
 #############################################################################################
 ########################                 以上通用           ##################################
 #############################################################################################
-
 #######################    下面必须       ###################################
 #gson
 #Gson解析包的,不然会报错。
@@ -161,20 +146,20 @@
 -keep public class com.istation.cssdk.bean.**{
     *;
 }
--keep public class com.istation.cssdk.WskCSService{
+-keep public class com.istation.cssdk.IstationService{
     *;
 }
--keep public class com.istation.cssdk.WskCS{
+-keep public class com.istation.cssdk.IstationSDK{
     *;
 }
--keep public class com.istation.cssdk.WskCS$*{
+-keep public class com.istation.cssdk.IstationSDK$*{
     *;
 }
--keep public class com.istation.cssdk.WskCSPushBR{
+-keep public class com.istation.cssdk.IstationPushBR{
     *;
 }
 
--keep public class com.istation.cssdk.WskCSActivity{
+-keep public class com.istation.cssdk.IstationCSActivity{
     *;
 }
 # Gson uses generic type information stored in a class file when working with fields. Proguard
