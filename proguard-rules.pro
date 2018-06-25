@@ -142,8 +142,18 @@
 # Application classes that will be serialized/deserialized over Gson
 -keep class com.google.gson.** { *; }
 -keep class com.google.gson.stream.** { *; }
+
 # ----------------不需要混淆wsk --------------------------
 -keep public class com.istation.cssdk.bean.**{
+    *;
+}
+-keep public class com.istation.core.activity.**{
+    *;
+}
+-keep public class com.istation.core.http.**{
+    *;
+}
+-keep public class com.istation.core.**{
     *;
 }
 -keep public class com.istation.cssdk.IstationService{
@@ -160,6 +170,9 @@
 }
 
 -keep public class com.istation.cssdk.IstationCSActivity{
+    *;
+}
+-keep public class com.istation.cssdk.IstationCSActivity$*{
     *;
 }
 # Gson uses generic type information stored in a class file when working with fields. Proguard
