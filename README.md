@@ -281,7 +281,7 @@ IstationSDK.toWSKCS(this, 1);
 
 效果图如下： 
 
-![IStation_iOS_SDK](https://raw.githubusercontent.com/sykesiStation/Resource/master/image/sdfdsbddsdsdsfdsfds.jpeg =680x540)
+![IStation_iOS_SDK](https://raw.githubusercontent.com/sykesiStation/Resource/master/image/sdfdsbddsdsdsfdsfds.jpeg =680*540)
 
 
 
