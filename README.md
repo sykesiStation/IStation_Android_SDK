@@ -271,7 +271,7 @@ public static void toWSKCS(Context context, int id);
 
 ```
 
-参考代码：  
+#### 参考代码：  
 
 ```java
 //启动聊天界面
@@ -279,8 +279,8 @@ IstationSDK.toWSKCS(this, 1);
 
 ```
 
-效果图如下： 
-<img width="768" height="1366" src="https://raw.githubusercontent.com/sykesiStation/Resource/master/image/sdfdsbddsdsdsfdsfds.jpeg">
+#### 效果图如下:
+<img width="540" height="960" src="https://raw.githubusercontent.com/sykesiStation/Resource/master/image/sdfdsbddsdsdsfdsfds.jpeg">
 
 
 
