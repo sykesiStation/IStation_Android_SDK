@@ -82,6 +82,11 @@ public class UserInfo {
      */
     private String remark;
     
+    /**
+    * 传递自定义客户信息
+    */
+    private String customData;
+
   }
 ```
 
@@ -89,6 +94,20 @@ public class UserInfo {
 * nickName为你的业务平台系统中的用户名，用来在客服平台展示访客的名称
 * appKey用来区分istation集成客户端，在istation平台的 **App SDK设置** 中可以找到
 * userInfo用户信息
+* customData 用来传递自定义客户信息
+
+> 代码示例：
+```java
+userInfo.setCustomData("{\\\"label_cn\\\":\\\"订单号\\\", \\\"label_en\\\":\\\"orderNo\\\", \\\"value\\\":\\\"1111111\\\"},\"\n" + "\"{\\\"label_cn\\\":\\\"员工号\\\", \\\"label_en\\\":\\\"empNo\\\", \\\"value\\\":\\\"2222222\\\"}");
+```
+
+##### 自定义客户信息使用注意：  
+| 字段 | 类型 | 说明 | 
+|---|---|---|
+| label_cn | String | 该项数据显示的中文名称  |
+| label_en | String | 该项数据显示的英文名称  |
+| value | String | 该数据显示的值，类型不做限定，根据实际需要进行设定 |
+
 ### 4.registerReceiver IstationSDKPushBR
 > 继承接收istation客服消息推送的广播
 ```java
@@ -233,9 +252,36 @@ public class IstationUIConfig {
      * title右边text颜色
      */
     private Integer titleRightColor;
+    
+    
 
+```
 
+### 集成热点引导问题
+在启动聊天界面时，需要传递热点引导问题ID，热点引导问题ID获取参考：[如何获取热点引导问题ID](https://github.com/sykesiStation/IStation_iOS_SDK/wiki/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E7%83%AD%E7%82%B9%E5%BC%95%E5%AF%BC%E9%97%AE%E9%A2%98ID "target=_blank")     
 
+```java
+
+/**
+ * 联系客服界面,传入常见问题
+ * @param context
+ * @param id      热点问题id
+ */
+public static void toWSKCS(Context context, int id);
+
+```
+
+参考代码：  
+
+```java
+//启动聊天界面
+IstationSDK.toWSKCS(this, 1);
+
+```
+
+效果图如下： 
+
+![IStation_iOS_SDK](https://raw.githubusercontent.com/sykesiStation/Resource/master/image/faq3_small.png)
 
 
 
