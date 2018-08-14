@@ -280,7 +280,7 @@ IstationSDK.toWSKCS(this, 1);
 ```
 
 #### 效果图如下:
-<img width="270" height="480" src="Resource/image/Android.png">
+<img width="270" height="480" src="https://raw.githubusercontent.com/sykesiStation/Resource/master/image/Android.png">
 
 
 
